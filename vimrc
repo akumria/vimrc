@@ -26,6 +26,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+let g:syntastic_yaml_checkers = ['yamllint']
+let g:syntastic_yaml_yamllint_args = "-d \"{extends: default, rules: {line-length: disable}}\""
+
 " setup color scheme
 syntax enable
 colorscheme PaperColor
