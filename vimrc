@@ -12,6 +12,9 @@ set guioptions-=e
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
 
+" Jenkinsfile is groovy
+autocmd BufNewFile,BufReadPost Jenkinsfile set filetype=grooy
+
 " flag trailing whitespace
 highlight BadWhitespace ctermbg=red guibg=darkred
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
