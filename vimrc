@@ -29,6 +29,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_yaml_checkers = ['yamllint']
 let g:syntastic_yaml_yamllint_args = "-d \"{extends: default, rules: {line-length: disable}}\""
 
+let g:syntasttic_python_flake8_post_args='--ignore=E501'
+
 " setup color scheme
 syntax enable
 colorscheme PaperColor
