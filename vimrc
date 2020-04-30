@@ -1,52 +1,45 @@
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
-set encoding=utf-8
+" colorscheme
+" mkdir -p ~/.vim/pack/github-NLKNguyen
+" git clone https://github.com/NLKNguyen/papercolor-theme \
+" ~/.vim/pack/github-NLKNguyen/opt
+" mkdir -p ~/.vim/color
+" ln -s ~/.vim/pack/github-NLKNguyen/opt/colors/PaperColor.vim ~/.vim/colors/
 
-" get flagship going
-set laststatus=2
-set showtabline=2
-set guioptions-=e
+" https://github.com/dense-analysis/ale#installation
+" Set this. Airline will handle the rest.
+let g:airline#extensions#ale#enabled = 1
+let g:ale_open_list = 1
+let g:ale_python_flake8_options = '--ignore=E501'
+" https://github.com/tpope/vim-fugitive
+" https://github.com/tpope/vim-sensible
+" https://github.com/tpope/vim-surround
+" https://github.com/vim-airline/vim-airline
+let g:airline#extensions#whitespace#enabled = 1
+" https://github.com/vim-airline/vim-airline-themes
 
-" all .md files are Markdown
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+" my *actual* changes
+set number
+set colorcolumn=74
 
-" Jenkinsfile is groovy
-autocmd BufNewFile,BufReadPost Jenkinsfile set filetype=grooy
 
-" flag trailing whitespace
-highlight BadWhitespace ctermbg=red guibg=darkred
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-
-" syntastic recommended settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_yaml_checkers = ['yamllint']
-let g:syntastic_yaml_yamllint_args = "-d \"{extends: default, rules: {line-length: disable}}\""
-
-let g:syntastic_python_flake8_args = '--ignore=E501'
-
-" setup color scheme
-syntax enable
-colorscheme PaperColor
 " the light version is easier on my eyes
 if has('gui_running')
     set background=light
 else
     set background=dark
 endif
-
-set number
+colorscheme PaperColor
 
 let g:PaperColor_Theme_Options = {
   \   'transparent_background': 1
   \ }
 let g:PaperColor_Python_Highlight_Builtins = 1  " turns built-in highlighting on
+
+
+" Put these lines at the very end of your vimrc file.
+" Load all plugins now.
+" Plugins need to be added to runtimepath before helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL
