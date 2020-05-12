@@ -21,6 +21,12 @@ let g:airline#extensions#whitespace#enabled = 1
 set number
 set colorcolumn=74
 
+" netrw settings via http://shapeshed.com/vim-netrw/
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 3
+let g:netrw_winsize = 25
+
 " enable copy / paster on MacOS straight to the clipboard
 " https://stackoverflow.com/a/680271
 set clipboard=unnamed
