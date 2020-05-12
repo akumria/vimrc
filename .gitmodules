@@ -1,0 +1,3 @@
+[submodule "pack/github-dense-analysis/start/ale"]
+	path = pack/github-dense-analysis/start/ale
+	url = http://github.com/dense-analysis/ale.git
