@@ -4,3 +4,9 @@
 [submodule "pack/github-NLKNguyen/opt"]
 	path = pack/github-NLKNguyen/opt
 	url = https://github.com/NLKNguyen/papercolor-theme
+[submodule "pack/github-vim-airline/start/vim-airline"]
+	path = pack/github-vim-airline/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "pack/github-vim-airline/start/vim-airline-themes"]
+	path = pack/github-vim-airline/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
