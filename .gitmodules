@@ -1,3 +1,6 @@
 [submodule "pack/github-dense-analysis/start/ale"]
 	path = pack/github-dense-analysis/start/ale
 	url = http://github.com/dense-analysis/ale.git
+[submodule "pack/github-NLKNguyen/opt"]
+	path = pack/github-NLKNguyen/opt
+	url = https://github.com/NLKNguyen/papercolor-theme

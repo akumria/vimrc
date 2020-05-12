@@ -1,0 +1,1 @@
+../pack/github-NLKNguyen/opt/colors/PaperColor.vim
