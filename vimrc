@@ -21,6 +21,10 @@ let g:airline#extensions#whitespace#enabled = 1
 set number
 set colorcolumn=74
 
+" enable copy / paster on MacOS straight to the clipboard
+" https://stackoverflow.com/a/680271
+set clipboard=unnamed
+
 
 " the light version is easier on my eyes
 if has('gui_running')
