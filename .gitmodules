@@ -16,3 +16,6 @@
 [submodule "pack/github-tpope/start/sensible"]
 	path = pack/github-tpope/start/sensible
 	url = https://tpope.io/vim/sensible.git
+[submodule "pack/github-tpope/start/surround"]
+	path = pack/github-tpope/start/surround
+	url = https://tpope.io/vim/surround.git
